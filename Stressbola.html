@@ -31,18 +31,43 @@
 
         let result = document.querySelector('.result'),
           img_result = document.querySelector('.img-result'),
-          save = document.querySelector('.save'),
+
+          websave = document.querySelector('.websave'),
+          mobsave = document.querySelector('.mobsave'),
+
+          webcamera = document.querySelector('#cameraw'),
+          mobcamera = document.querySelector('#cameram'),
+
           cropped = document.querySelector('.cropped'),
-          input = document.querySelector('#file-input'),
+          webinput = document.querySelector('#file-inputw'),
+          mobinput = document.querySelector('#file-inputm'),
           box2 = document.querySelector('.box-2'),
           cropper = '';
 
-        document.getElementById('get_file').onclick = function() {
-          document.getElementById('file-input').click();
+        console.log(webcamera);
+        console.log(mobcamera.style.display);
+        if (webcamera.style.display != "none") {
+          save = websave;
+          console.log("from web");
+          console.log(save);
+        } else {
+          save = mobsave;
+          console.log("from mob");
+          console.log(save);
         }
 
-        input.addEventListener("change", upload);
-        save.addEventListener("click", crop);
+
+
+        document.getElementById('get_filew').onclick = function() {
+          document.getElementById('file-inputw').click();
+        }
+        document.getElementById('get_filem').onclick = function() {
+          document.getElementById('file-inputm').click();
+        }
+        webinput.addEventListener("change", upload);
+        mobinput.addEventListener("change", upload);
+        websave.addEventListener("click", crop);
+        mobsave.addEventListener("click", crop);
 
         // upload photo with cropper on click of camera input button
         function upload(e) {
@@ -60,7 +85,8 @@
                 // append new image
                 result.appendChild(img);
                 // show save btn and options
-                save.classList.remove('hide');
+                websave.classList.remove('hide');
+                mobsave.classList.remove('hide');
                 result.classList.remove('hide');
                 cropped.classList.add('hide');
                 // init cropper
@@ -84,7 +110,8 @@
           cropped.classList.add('center');
           img_result.classList.remove('hide');
           result.classList.add('hide');
-          save.classList.add('hide');
+          websave.classList.add('hide');
+          mobsave.classList.add('hide');
           // show image cropped
           cropped.src = imgSrc;
         }
@@ -109,7 +136,7 @@
           //  $images.filter('img:eq(2)').slideToggle("300");
 
           $(".actions").not("#slapef").slideUp();
-          $("#slapef").toggle("slow", function() {
+          $("#slapef").toggle("fast", function() {
             $('#slef').show("fast");
             $('#slpmb').show("fast");
             $('#clap').trigger('play');
@@ -127,7 +154,7 @@
         } else if (action == 'punch') {
 
           $(".actions").not("#punchef").slideUp();
-          $("#punchef").show("slow", function() {
+          $("#punchef").show("fast", function() {
             $('#tom').trigger('play');
             $('#tom').prop('currentTime', 0);
             $('#pef').show("fast");
@@ -143,7 +170,7 @@
 
         } else {
           $(".actions").not("#kickef").slideUp();
-          $("#kickef").show("slow", function() {
+          $("#kickef").show("fast", function() {
             $('#footkick').trigger('play');
             $('#footkick').prop('currentTime', 0);
             $('#kef').show("fast");
@@ -177,15 +204,15 @@
       <div></div>
       <div id="edit" class="row  keys pdTop01">
         <img src="images/logo3.png" id="logo" class="logosize">
-        <div id="camera" class="col-xs col-sm col-md-1 col-lg-1 hidden-sm hidden-xs">
+        <div id="cameraw" class="col-xs col-sm col-md-1 col-lg-1 hidden-sm hidden-xs">
           <form>
-            <button type="button" id="get_file" class="btn btn-info btn-lg center">
+            <button type="button" id="get_filew" class="btn btn-info btn-lg center">
              <span class="glyphicon glyphicon-camera"></span>
-             <input type="file" id="file-input"/>
+             <input type="file" id="file-inputw"/>
             </button>
           </form>
         </div>
-        <div id="save" class="col-xs col-sm col-md-1 col-lg-1 save hide">
+        <div class="col-xs col-sm col-md-1 col-lg-1 hide websave hidden-sm hidden-xs">
           <button class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-saved"></span>
           </button>
@@ -210,15 +237,15 @@
 
 
         <div id="edit" class="row  keys pdTop01">
-          <div id="camera" class="col-xs col-sm col-md-1 col-lg-1 hidden-lg hidden-md">
+          <div id="cameram" class="col-xs col-sm col-md-1 col-lg-1 hidden-lg hidden-md">
             <form>
-              <button type="button" id="get_file" class="btn btn-info btn-lg center">
+              <button type="button" id="get_filem" class="btn btn-info btn-lg center">
                <span class="glyphicon glyphicon-camera"></span>
-               <input type="file" id="file-input"/>
+               <input type="file" id="file-inputm"/>
               </button>
             </form>
           </div>
-          <div id="save" class="col-xs col-sm col-md-1 col-lg-1 save hide">
+          <div class="col-xs col-sm col-md-1 col-lg-1 hide mobsave hidden-lg hidden-md">
             <button class="btn btn-info btn-lg">
             <span class="glyphicon glyphicon-saved"></span>
             </button>
