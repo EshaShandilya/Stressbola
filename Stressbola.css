@@ -1,0 +1,264 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+#file-input {
+  display: none;
+}
+
+.ueffect {
+  z-index: -1;
+}
+
+.keys {
+  display: flex;
+  flex: 1; //min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverPhoto {
+  background-image: url("images/cover.jpg"); //background-size: cover;
+  min-height: 100vh;
+}
+
+.center {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffdb4d;
+  box-shadow: 0 0 1rem #ffdb4d;
+}
+
+.profileBorder {
+  width: 500px;
+  height: 450px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #5bc0de;
+  position: relative;
+  overflow: hidden;
+}
+
+.imageSize {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: inherit;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+  background-color: transparent !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  webkit-box-shadow: none !important;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffdb4d;
+}
+
+.blueBorder {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #5bc0de;
+  width: 100px;
+  height: 100px;
+}
+
+.powerButton {
+  border-width: 0px !important;
+  padding: 0px !important;
+}
+
+.marginLR {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.glyphicon {
+  font-size: 27px;
+}
+
+.pdTop01 {
+  padding-top: 1%;
+}
+
+.pdTop {
+  padding-top: 2%;
+}
+
+.pd0 {
+  padding: 0px;
+}
+
+.cropper-crop-box, .cropper-view-box {
+  border-radius: 50%;
+}
+
+.cropper-view-box {
+  box-shadow: 0 0 0 1px #39f;
+  outline: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.actions {
+  display: none;
+}
+
+.effects {
+  position: absolute;
+  top: 39px;
+  right: 123px;
+  height: 550px;
+  width: 450px;
+}
+
+.sleffect {
+  position: absolute;
+  top: 24px;
+  left: 156px;
+  height: 550px;
+  width: 450px;
+}
+
+.beat-profile {
+  border-radius: 50%;
+  border-style: dashed;
+  border-width: 17px;
+  border-color: #f0f330;
+}
+
+.slap-profile {
+  width: 500px;
+  height: 450px;
+  border-radius: 50%;
+  border-style: double;
+  border-width: 15px;
+  border-color: #e01717;
+  position: relative;
+  overflow: hidden;
+}
+
+.kick-profile {
+  width: 500px;
+  height: 450px;
+  border-radius: 50%;
+  border-style: dotted;
+  border-width: 15px;
+  border-color: #ff2f00;
+  position: relative;
+  overflow: hidden;
+}
+
+.redprofileBorder {
+  width: 500px;
+  height: 450px;
+  border: 10px solid #cc4242;
+  background: red;
+  border-image-source: url('zigzag_red.png');
+  border-image-slice: 10 fill;
+  border-image-repeat: round;
+}
+
+.borderbox {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.pueffect {
+  position: absolute;
+  top: 83px;
+  left: 213px;
+  height: 550px;
+  width: 450px;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  .profileBorder {
+    width: 300px;
+    height: 270px;
+    border-radius: 50%;
+  }
+  .pdTop {
+    padding-top: 44%;
+  }
+  .position {
+    padding-top: 25%;
+  }
+  /* .pdBtm {
+    padding-bottom: 25%;
+  } */
+  .glyphicon {
+    font-size: 30px;
+  }
+  .blueBorder {
+    width: 80px;
+    height: 80px;
+  }
+  .container-fluid {
+    padding-top: 15px;
+  }
+  .seffect {
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    height: 225px;
+    width: 256px;
+    overflow: hidden;
+  }
+  .sleffect {
+    position: absolute;
+    top: 88px;
+    left: 7px;
+    width: 180px;
+  }
+  .pueffect {
+    position: absolute;
+    top: 88px;
+    left: 7px;
+    width: 180px;
+  }
+  .peffect {
+    position: absolute;
+    top: 41px;
+    right: 68px;
+    height: 283px;
+    width: 227px;
+    -ms-transform: rotate(36deg);
+    -webkit-transform: rotate(36deg);
+    transform: rotate(36deg);
+    overflow: hidden;
+  }
+  .keffect {
+    position: absolute;
+    top: -12px;
+    right: 34px;
+    height: 260px;
+    width: 237px;
+    -ms-transform: rotate(12deg);
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
+    overflow: hidden;
+  }
+  .logosize {
+    width: 250px;
+    height: 50px;
+  }
+  /* Portrait phones and smaller */
