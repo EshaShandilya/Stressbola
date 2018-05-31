@@ -109,7 +109,7 @@
           //  $images.filter('img:eq(2)').slideToggle("300");
 
           $(".actions").not("#slapef").slideUp();
-          $("#slapef").toggle("slow", function() {
+          $("#slapef").toggle("fast", function() {
             $('#slef').show("fast");
             $('#slpmb').show("fast");
             $('#clap').trigger('play');
@@ -127,7 +127,7 @@
         } else if (action == 'punch') {
 
           $(".actions").not("#punchef").slideUp();
-          $("#punchef").show("slow", function() {
+          $("#punchef").show("fast", function() {
             $('#tom').trigger('play');
             $('#tom').prop('currentTime', 0);
             $('#pef').show("fast");
@@ -143,7 +143,7 @@
 
         } else {
           $(".actions").not("#kickef").slideUp();
-          $("#kickef").show("slow", function() {
+          $("#kickef").show("fast", function() {
             $('#footkick').trigger('play');
             $('#footkick').prop('currentTime', 0);
             $('#kef').show("fast");
