@@ -5,7 +5,11 @@ body, html {
   overflow: hidden;
 }
 
-#file-input {
+#file-inputw {
+  display: none;
+}
+
+#file-inputm {
   display: none;
 }
 
