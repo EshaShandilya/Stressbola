@@ -146,7 +146,7 @@
             $(".profileBorder").addClass("slap-profile");
             $(".profileBorder").effect("shake", callback);
             $("#slapef").effect("bounce", {
-              times: 3
+              times: 1
             }, "fast");
 
           });
@@ -164,7 +164,7 @@
             $(".profileBorder").effect("pulsate", callback);
             $("#punchef").effect("bounce", {
               times: 3
-            }, "slow");
+            }, "fast");
 
           });
 
@@ -181,7 +181,7 @@
               pieces: 16
             }, callback);
             $("#kickef").effect("bounce", {
-              times: 5
+              times: 2
             }, "fast");
           });
         }
@@ -189,7 +189,7 @@
         function callback() {
           setTimeout(function() {
             $(".profileBorder").removeAttr("style").hide().fadeOut();
-          }, 200);
+          }, "fast");
         };
       }
 
